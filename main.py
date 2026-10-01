@@ -7,7 +7,7 @@ from window import draw_window, show_game_over_message, generate_initial_platfor
 from game import (
     apply_gravity, move_doodle, move_platforms,
     check_platform_collisions, scroll_camera,
-    check_game_over, restart_game
+    check_game_over, restart_game, generate_new_platforms
 )
 
 # Initialisation de Pygame et de l'horloge
@@ -41,6 +41,7 @@ while running:
     move_platforms()
     check_platform_collisions()
     scroll_camera()
+    generate_new_platforms()
     check_game_over()
 
     # 4. Affichage graphique
